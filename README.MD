@@ -1,5 +1,5 @@
 <!-- [START BADGES] -->
-[![CI](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml)
+[![CI](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml)[![CD](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/cd.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/cd.yml)
 <!-- [END BADGES] -->
 
 ## Yleiskuvaus
