@@ -1,4 +1,3 @@
-
 on:
   push:
     branches: [ main ]
@@ -44,7 +43,7 @@ jobs:
     mirror: # optional
     # The token used as Authorization header when fetching from the mirror
     mirror-token: # optional
-          
+
             - name: Upload a Build Artifact
   uses: actions/upload-artifact@v6.0.0
   with:
@@ -72,7 +71,7 @@ Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
     # If true, hidden files will be included in the artifact. If false, hidden files will be excluded from the artifact.
 
     include-hidden-files: # optional, default is false
-          
+
             - name: Setup Node.js environment
   uses: actions/setup-node@v6.1.0
   with:
@@ -100,7 +99,7 @@ Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
     mirror: # optional
     # The token used as Authorization header when fetching from the mirror
     mirror-token: # optional
-          
+
             - name: Download a Build Artifact
   uses: actions/download-artifact@v7.0.0
   with:
@@ -120,4 +119,3 @@ Minimum 1 day. Maximum 90 days unless changed from the repository settings page.
     repository: # optional, default is ${{ github.repository }}
     # The id of the workflow run where the desired download artifact was uploaded from. If github-token is specified, this is the run that artifacts will be downloaded from.
     run-id: # optional, default is ${{ github.run_id }}
-          
