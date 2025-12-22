@@ -28,7 +28,6 @@ Tavoitteena on tehdä Home Assistantista palvelu, jota voi käyttää kuka tahan
 ---
 ## Keskeinen idea
 
-```mermaid
 graph LR
     subgraph Provisioning
         A[Terraform/Ansible] --> B[Docker/Azure Container Apps]
