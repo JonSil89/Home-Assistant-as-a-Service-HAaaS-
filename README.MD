@@ -4,9 +4,11 @@
 
 
 [![Project Status](https://img.shields.io/badge/Status-Scale--Up-green?style=for-the-badge)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-)
+![Lifecycle Managed](https://img.shields.io/badge/Lifecycle-Device%20Onboarding%20%E2%86%92%20Maintenance%20%E2%86%92%20Decommissioning-success?style=for-the-badge)
 ![Infrastructure](https://img.shields.io/badge/Infrastructure-IaC-blue?style=for-the-badge&logo=ansible)
 ![Cloud](https://img.shields.io/badge/Cloud-Azure-0089D6?style=for-the-badge&logo=microsoft-azure)
 ![Security](https://img.shields.io/badge/Security-GDPR--Ready-red?style=for-the-badge)
+
 ## Yleiskuvaus
 
 **Home Assistant as a Service (HAaaS)** on suomalainen IoT-projektialusta, joka yhdistää **Home Assistantin avoimen lähdekoodin joustavuuden** ja **yritystason hallittavuuden**.  
@@ -26,16 +28,6 @@ Tavoitteena on tehdä Home Assistantista palvelu, jota voi käyttää kuka tahan
 ---
 
 ## Keskeinen idea
-
-| Osa-alue | Kuvaus |
-|-----------|--------|
-| **Core Platform** | Home Assistant (Open Source) |
-| **IaC Layer** | Automatisoidut asennukset ja konfiguraatiot (Ansible, Terraform, PowerShell DSC) |
-| **DLCM Layer** | GitLab CI/CD, testaus- ja julkaisuputket |
-| **Hosting** | Azure / Docker / paikallinen laite (Raspberry Pi, NUC) |
-| **Monitoring** | Prometheus, Grafana, Home Assistant Supervisor |
-| **Documentation** | GitBook + AI-avusteinen dokumentaatio |
-| **Business Model** | Subscription-pohjainen hallintapalvelu (Home Assistant as a Service) |
 
 
 
