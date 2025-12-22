@@ -47,7 +47,7 @@ graph LR
     subgraph Secure_Access
         G[Cloudflare Tunnel] --> C
         C --> H[Mobile App / Dashboard]
-    end ```
+    end```
 
 ## Technical Architecture (DLCM Model)
 
