@@ -48,8 +48,6 @@ graph LR
         G[Cloudflare Tunnel] --> C
         C --> H[Mobile App / Dashboard]
     end
-
-
 ## Technical Architecture (DLCM Model)
 
 The HAaaS ecosystem follows the Digital Lifecycle Management (DLCM) model, ensuring a robust path from deployment to decommissioning.
