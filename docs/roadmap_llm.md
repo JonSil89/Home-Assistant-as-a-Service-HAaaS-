@@ -1,5 +1,4 @@
-```Mermaid
-
+```mermaid
 
 graph TD
     %% UI Layer - User Interface & Inputs
@@ -44,7 +43,7 @@ graph TD
     E_EP --> F_T & F_L & F_C & F_N
     F_L & F_C --> G_E
     G_E -.->|State Update| D
-    D -.->|LLM Response| 
+    D -.->|LLM Response| B
 
   
 ```
