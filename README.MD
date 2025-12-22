@@ -37,6 +37,33 @@ Tavoitteena on tehdä Home Assistantista palvelu, jota voi käyttää kuka tahan
 | **Documentation** | GitBook + AI-avusteinen dokumentaatio |
 | **Business Model** | Subscription-pohjainen hallintapalvelu (Home Assistant as a Service) |
 
+
+
+
+## Technical Architecture (DLCM Model)
+
+The HAaaS ecosystem follows the Digital Lifecycle Management (DLCM) model, ensuring a robust path from deployment to decommissioning.
+
+```mermaid
+graph LR
+    subgraph Provisioning
+    A[Terraform/Ansible] --> B[Docker/Azure Container Apps]
+    end
+    
+    subgraph Core_Service
+    B --> C{Home Assistant Core}
+    C --> D[(InfluxDB / MariaDB)]
+    end
+    
+    subgraph Management
+    E[GitLab CI/CD] -->|Continuous Update| C
+    F[Prometheus/Grafana] -->|Telemetria| C
+    end
+    
+    subgraph Secure_Access
+    G[Cloudflare Tunnel] --> C
+    C --> H[Mobile App / Dashboard]
+    end
 ---
 
 ## Markkinanäkymä
