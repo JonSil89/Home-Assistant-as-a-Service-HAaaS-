@@ -2,6 +2,11 @@
 [![CI](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml)
 <!-- [END BADGES] -->
 
+
+[![Project Status](https://img.shields.io/badge/Status-Scale--Up-green?style=for-the-badge)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-)
+![Infrastructure](https://img.shields.io/badge/Infrastructure-IaC-blue?style=for-the-badge&logo=ansible)
+![Cloud](https://img.shields.io/badge/Cloud-Azure-0089D6?style=for-the-badge&logo=microsoft-azure)
+![Security](https://img.shields.io/badge/Security-GDPR--Ready-red?style=for-the-badge)
 ## Yleiskuvaus
 
 **Home Assistant as a Service (HAaaS)** on suomalainen IoT-projektialusta, joka yhdistää **Home Assistantin avoimen lähdekoodin joustavuuden** ja **yritystason hallittavuuden**.  
