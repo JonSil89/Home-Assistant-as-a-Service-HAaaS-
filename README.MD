@@ -29,14 +29,6 @@ Tavoitteena on tehdä Home Assistantista palvelu, jota voi käyttää kuka tahan
 
 ## Keskeinen idea
 
-
-
-
-## Technical Architecture (DLCM Model)
-
-The HAaaS ecosystem follows the Digital Lifecycle Management (DLCM) model, ensuring a robust path from deployment to decommissioning.
-
-```mermaid
 graph LR
     subgraph Provisioning
     A[Terraform/Ansible] --> B[Docker/Azure Container Apps]
@@ -56,6 +48,13 @@ graph LR
     G[Cloudflare Tunnel] --> C
     C --> H[Mobile App / Dashboard]
     end
+
+
+## Technical Architecture (DLCM Model)
+
+The HAaaS ecosystem follows the Digital Lifecycle Management (DLCM) model, ensuring a robust path from deployment to decommissioning.
+
+
 ---
 
 ## Markkinanäkymä
