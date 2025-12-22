@@ -29,7 +29,7 @@ Tavoitteena on tehdä Home Assistantista palvelu, jota voi käyttää kuka tahan
 
 ## Keskeinen idea
 
-graph LR
+```mermaid graph LR
     subgraph Provisioning
     A[Terraform/Ansible] --> B[Docker/Azure Container Apps]
     end
@@ -47,7 +47,7 @@ graph LR
     subgraph Secure_Access
     G[Cloudflare Tunnel] --> C
     C --> H[Mobile App / Dashboard]
-    end
+    end```
 
 
 ## Technical Architecture (DLCM Model)
