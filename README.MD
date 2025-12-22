@@ -29,25 +29,26 @@ Tavoitteena on tehdä Home Assistantista palvelu, jota voi käyttää kuka tahan
 
 ## Keskeinen idea
 
-``` mermaid graph LR
+```mermaid
+graph LR
     subgraph Provisioning
-    A[Terraform/Ansible] --> B[Docker/Azure Container Apps]
+        A[Terraform/Ansible] --> B[Docker/Azure Container Apps]
     end
-    
+
     subgraph Core_Service
-    B --> C{Home Assistant Core}
-    C --> D[(InfluxDB / MariaDB)]
+        B --> C{Home Assistant Core}
+        C --> D[(InfluxDB / MariaDB)]
     end
-    
+
     subgraph Management
-    E[GitLab CI/CD] -->|Continuous Update| C
-    F[Prometheus/Grafana] -->|Telemetria| C
+        E[GitLab CI/CD] -->|Continuous Update| C
+        F[Prometheus/Grafana] -->|Telemetria| C
     end
-    
+
     subgraph Secure_Access
-    G[Cloudflare Tunnel] --> C
-    C --> H[Mobile App / Dashboard]
-    end ```
+        G[Cloudflare Tunnel] --> C
+        C --> H[Mobile App / Dashboard]
+    end
 
 
 ## Technical Architecture (DLCM Model)
