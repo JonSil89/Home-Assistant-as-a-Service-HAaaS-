@@ -26,12 +26,11 @@ Luoda hallittu, avoimeen lähdekoodiin perustuva automaatioekosysteemi, joka yhd
 Tavoitteena on tehdä Home Assistantista palvelu, jota voi käyttää kuka tahansa – ilman asennus- tai ylläpitohaasteita.
 
 ---
-
 ## Keskeinen idea
 
+```mermaid
 graph LR
-    subgraph 
-Provisioning
+    subgraph Provisioning
         A[Terraform/Ansible] --> B[Docker/Azure Container Apps]
     end
 
@@ -49,7 +48,6 @@ Provisioning
         G[Cloudflare Tunnel] --> C
         C --> H[Mobile App / Dashboard]
     end
-  
 
 ## Technical Architecture (DLCM Model)
 
