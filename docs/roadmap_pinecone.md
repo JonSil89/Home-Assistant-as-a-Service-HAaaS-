@@ -1,9 +1,4 @@
-''' mermaid
-graph TD
-    subgraph Data_Source
-        A[docs/*.md] -->|Read| B[Python Script]
-        A1[README.md] -->|Read| B
-    end
+
 
     subgraph Embedding_Process
         B -->|Chunking| C{OpenAI Embedding Model}
@@ -22,5 +17,3 @@ graph TD
 
     style E fill:#00c853,stroke:#333,stroke-width:2px
     style G fill:#2979ff,stroke:#333,stroke-width:2px
-end
-''
