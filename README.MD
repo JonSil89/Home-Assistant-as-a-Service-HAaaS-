@@ -10,7 +10,7 @@
 ![Security](https://img.shields.io/badge/Security-GDPR--Ready-red?style=for-the-badge)
 
 # Home Stack – Automated Infrastructure & Data Quality
-<a href="https://app.commanddash.io/agent?github=KÄYTTÄJÄNIMI/REPOSITORIO"><img src="https://img.shields.io/badge/AI-Code%20Assist-EB9FDA"></a>
+<a href="https://app.commanddash.io/agent?github=JonSil89/Home-Assistant-as-a-Service-HAaaS-"><img src="https://img.shields.io/badge/AI-Code%20Assist-EB9FDA"></a>
 
 This repository contains my personal infrastructure-as-code (IaC) experiments, 
 CI/CD pipelines, and automated data quality checks.
