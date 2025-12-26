@@ -100,3 +100,30 @@ Troubleshooting the configuration files
 Validating the configuration
 Related links
 YAML Style Guide for Home Assistant developers
+
+```mermaid
+graph TD
+    subgraph Configuration_Logic
+        A[configuration.yaml] -->|Core Settings| B(Integrations)
+        A -->|Splitting Files| C{Include Syntax}
+    end
+
+    subgraph Hierarchy
+        B --> D[Domain: light, sensor, notify]
+        D --> E[Platform: mqtt, pushbullet, hue]
+        E --> F[Key-Value Pairs: name, state_topic, api_key]
+    end
+
+    subgraph Data_Types
+        G[Mappings] --- H[key: value]
+        I[Collections/Lists] --- J[- item 1]
+    end
+
+    subgraph Security_Police
+        K[!env_var] --> L[Secrets / Passwords]
+        M[!include secrets.yaml] --> L
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style L fill:#ff5252,stroke:#333,stroke-width:2px
+```
