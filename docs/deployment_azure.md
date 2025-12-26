@@ -1,9 +1,3 @@
-deploy:
-  needs: build
-  runs-on: ubuntu-latest
-  steps:
-    - name: Deploy to Azure
-      uses: azure/webapps-deploy
 
 
 ```mermaid
