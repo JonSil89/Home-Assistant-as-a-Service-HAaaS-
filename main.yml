@@ -1,2 +1,0 @@
-- name: Copy .env file
-  run: cp .env.example .env
