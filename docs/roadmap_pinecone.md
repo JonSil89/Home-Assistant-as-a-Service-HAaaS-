@@ -1,4 +1,4 @@
-
+''' mermaid
 graph TD
     subgraph Data_Source
         A[docs/*.md] -->|Read| B[Python Script]
@@ -22,3 +22,5 @@ graph TD
 
     style E fill:#00c853,stroke:#333,stroke-width:2px
     style G fill:#2979ff,stroke:#333,stroke-width:2px
+end
+''
