@@ -1,0 +1,11 @@
+# Requirements
+
+This directory is reserved for non-code requirements and specifications.
+
+Planned content:
+- Compliance requirements (e.g. GDPR, ISO 27001 mappings)
+- Operational requirements (SLOs, availability, backup policies)
+- Architecture constraints and design decisions
+- Security and lifecycle requirements
+
+This directory is intentionally kept minimal at this stage and will be expanded as the project evolves.
