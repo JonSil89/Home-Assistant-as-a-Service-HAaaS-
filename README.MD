@@ -9,6 +9,13 @@
 ![Cloud](https://img.shields.io/badge/Cloud-Azure-0089D6?style=for-the-badge&logo=microsoft-azure)
 ![Security](https://img.shields.io/badge/Security-GDPR--Ready-red?style=for-the-badge)
 
+# Home Stack – Automated Infrastructure & Data Quality
+<a href="https://app.commanddash.io/agent?github=KÄYTTÄJÄNIMI/REPOSITORIO"><img src="https://img.shields.io/badge/AI-Code%20Assist-EB9FDA"></a>
+
+This repository contains my personal infrastructure-as-code (IaC) experiments, 
+CI/CD pipelines, and automated data quality checks.
+
+
 ## Yleiskuvaus
 
 **Home Assistant as a Service (HAaaS)** on suomalainen IoT-projektialusta, joka yhdistää **Home Assistantin avoimen lähdekoodin joustavuuden** ja **yritystason hallittavuuden**.  
