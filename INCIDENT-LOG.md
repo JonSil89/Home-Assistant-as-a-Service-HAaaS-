@@ -38,3 +38,8 @@ Instead of manual restoration, a **State-Based Recovery** was performed:
 
 ---
 *Log maintained by JonSil89 — Infrastructure & Compliance*
+
+---
+### Severity rationale: Local development halted; production and customer environments unaffected.
+
+### Classification: Automation-induced configuration drift
