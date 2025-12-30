@@ -16,8 +16,6 @@ Tämä esitys ei ole pelkkä tekninen parannus; se on **strateginen siirtymä ko
 | **Virheetön operointi** | Koodipohjaiset ympäristöt eliminoivat inhimilliset konfiguraatiovirheet. | **Kustannustehokkuus:** Vähemmän virheitä tarkoittaa vähemmän vianetsintää, mikä parantaa suoraan katteita. |
 | **Documentation by Design** | Kun infrastruktuuri on koodia, se **dokumentoi itse itsensä**. | **Operatiivinen selkeys:** Vähentää manuaalista dokumentointia ja mahdollistaa keskittymisen arkkitehtuuriin ja tekoälyavusteiseen suunnitteluun. |
 
-![Lifecycle Managed](https://img.shields.io/badge/Lifecycle-Device%20Onboarding%20%E2%86%92%20Maintenance%20%E2%86%92%20Decommissioning-success?style=for-the-badge)
-
 ---
 
 ## 2. Laatu- ja vaatimustenmukaisuusvarmistus (DLCM & PRRC)
