@@ -1,6 +1,6 @@
 
 
-<[![MIT License](https://img.shields.io/github/license/JonSil89/Home-Assistant-as-a-Service-HAaaS-?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/github/license/JonSil89/Home-Assistant-as-a-Service-HAaaS-?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/blob/master/LICENSE)
 [![Language](https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/pulls)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions)
