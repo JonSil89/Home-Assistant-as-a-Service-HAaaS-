@@ -1,0 +1,13 @@
+      - name: Add badges to README
+        uses: wow-actions/add-badges@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: README.md  # Lisää tämä rivi!
+          badges: |
+            [
+              {
+                "badge": "https://img.shields.io/github/license/${{ github.repository_owner }}/${{ github.event.repository.name }}?style=flat-square",
+                "alt": "MIT License",
+                "link": "https://github.com/${{ github.repository }}/blob/master/LICENSE"
+              }
+            ]
