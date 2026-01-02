@@ -1,8 +1,9 @@
 
 
-<!-- [START BADGES] -->
-[![CI](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml)
-<!-- [END BADGES] -->
+<[![MIT License](https://img.shields.io/github/license/JonSil89/Home-Assistant-as-a-Service-HAaaS-?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/blob/master/LICENSE)
+[![Language](https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/pulls)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions)
 
 
 [![Project Status](https://img.shields.io/badge/Status-Scale--Up-green?style=for-the-badge)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-)
