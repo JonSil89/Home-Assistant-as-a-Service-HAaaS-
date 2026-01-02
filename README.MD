@@ -1,3 +1,9 @@
+[![MIT License](https://img.shields.io/github/license/JonSil89/Home-Assistant-as-a-Service-HAaaS-?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/blob/master/LICENSE)
+[![Language](https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/pulls)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions)
+
+
 # Strategic Summary: IaC & DLCM in Modern Service Delivery
 
 ![Operational Power](https://img.shields.io/badge/Operational%20Power-POSIX%20Bash-4EAA25?style=for-the-badge&logo=gnu-bash)
