@@ -1,0 +1,5 @@
+ uses: actions/cache@v4
+  with:
+    path: |
+      ~/.gradle/caches
+      ~/.gradle/wrapper
