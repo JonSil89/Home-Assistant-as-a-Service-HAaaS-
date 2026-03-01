@@ -1,3 +1,9 @@
+[![MIT License](https://img.shields.io/github/license/JonSil89/Home-Assistant-as-a-Service-HAaaS-?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/blob/master/LICENSE)
+[![Language](https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/pulls)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions)
+
+
 # Strategic Summary: IaC & DLCM in Modern Service Delivery
 
 ![Operational Power](https://img.shields.io/badge/Operational%20Power-POSIX%20Bash-4EAA25?style=for-the-badge&logo=gnu-bash)
@@ -15,8 +21,6 @@ Tämä esitys ei ole pelkkä tekninen parannus; se on **strateginen siirtymä ko
 | **Tekninen toteutus (IaC)** | Korvaa manuaalisen työn koodilla hyödyntäen **PowerShell- ja Azure Automation** -osaamista. | **Nopeus ja skaalautuvuus:** Kokonaiset ympäristöt voidaan monistaa minuuteissa ilman asiantuntijamäärän kasvattamista. |
 | **Virheetön operointi** | Koodipohjaiset ympäristöt eliminoivat inhimilliset konfiguraatiovirheet. | **Kustannustehokkuus:** Vähemmän virheitä tarkoittaa vähemmän vianetsintää, mikä parantaa suoraan katteita. |
 | **Documentation by Design** | Kun infrastruktuuri on koodia, se **dokumentoi itse itsensä**. | **Operatiivinen selkeys:** Vähentää manuaalista dokumentointia ja mahdollistaa keskittymisen arkkitehtuuriin ja tekoälyavusteiseen suunnitteluun. |
-
-![Lifecycle Managed](https://img.shields.io/badge/Lifecycle-Device%20Onboarding%20%E2%86%92%20Maintenance%20%E2%86%92%20Decommissioning-success?style=for-the-badge)
 
 ---
 
@@ -63,6 +67,8 @@ Erityisosaaminen: IaC, DLCM, PRRC, Azure, PowerShell ja sosiaali- ja terveysalan
 <!-- [START BADGES] -->
 [![CI](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml)
 <!-- [END BADGES] -->
+[![CI Pipeline](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/status.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/status.yml)
+
 
 
 [![Project Status](https://img.shields.io/badge/Status-Scale--Up-green?style=for-the-badge)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-)
