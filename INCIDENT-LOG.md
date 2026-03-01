@@ -1,3 +1,7 @@
+# Case Study: Disaster Recovery & Version Control
+
+*Tämä dokumentaatio toimii työnäytteenä hallitusta kriisinhallinnasta ja Git-ympäristön palauttamisesta.*
+
 # Incident & Recovery Log
 
 This document records significant environment failures, automation anomalies, and their respective recovery actions. Maintenance of this log is part of our **Operational Quality** and **Compliance** (ISO 27001 / MDR) framework.
