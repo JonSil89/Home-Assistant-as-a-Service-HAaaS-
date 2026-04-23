@@ -1,0 +1,76 @@
+# =============================================================================
+# HAaaS – AI Layer Compose file
+#
+# ADDITIVE ONLY — this file does NOT modify any existing infrastructure.
+#
+# Usage (run from repo root):
+#   docker compose -f ai/docker-compose.ai.yml up --build
+#
+# Usage (detached):
+#   docker compose -f ai/docker-compose.ai.yml up -d --build
+#
+# Stop and clean up:
+#   docker compose -f ai/docker-compose.ai.yml down
+# =============================================================================
+
+services:
+
+  # ---------------------------------------------------------------------------
+  # AI Agent (FastAPI / uvicorn)
+  # ---------------------------------------------------------------------------
+  haas-ai-agent:
+    build:
+      # Context is the repo root so the `ai/` Python package resolves correctly.
+      context: ..
+      dockerfile: ai/agent/Dockerfile
+    container_name: haas-ai-agent
+    ports:
+      - "8100:8100"
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      # HA integration — set these when enabling real tool calls:
+      # HA_BASE_URL: http://homeassistant.local:8123
+      # HA_TOKEN: <long-lived access token>
+    networks:
+      - haas-ai-net
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8100/health')"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+
+  # ---------------------------------------------------------------------------
+  # Redis — STM persistence backend (disabled by default)
+  #
+  # Enable when you switch stm.py from InMemorySTM to RedisSTM:
+  #   1. Uncomment this block.
+  #   2. Uncomment RedisSTM in ai/memory/stm.py.
+  #   3. Pass REDIS_URL=redis://redis:6379 to haas-ai-agent environment.
+  # ---------------------------------------------------------------------------
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: haas-ai-redis
+  #   ports:
+  #     - "6379:6379"
+  #   networks:
+  #     - haas-ai-net
+  #   volumes:
+  #     - redis-data:/data
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "redis-cli", "ping"]
+  #     interval: 10s
+  #     timeout: 3s
+  #     retries: 5
+
+networks:
+  haas-ai-net:
+    driver: bridge
+    name: haas-ai-net
+
+# volumes:
+#   redis-data:
