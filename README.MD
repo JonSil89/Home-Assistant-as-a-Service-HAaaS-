@@ -3,11 +3,11 @@
 
 # Home Assistant as a Service - HAaaS
 
-Architecture and documentation proof-of-concept for a managed Home Assistant service model.
+Architecture, documentation and local-runtime proof-of-concept for a managed Home Assistant service model.
 
 This repository explores how Home Assistant environments could be deployed, documented and operated with repeatable infrastructure, lifecycle management and lightweight governance practices.
 
-> Current status: documentation and validation baseline. This is not a production-ready HAaaS platform.
+> Current status: documentation, validation and runnable local Docker baseline. This is not a production-ready HAaaS platform.
 
 ## Current status
 
@@ -16,8 +16,8 @@ This repository explores how Home Assistant environments could be deployed, docu
 | Service concept | Working documentation baseline | Managed Home Assistant / IoT operations model |
 | Architecture docs | Working baseline | Azure deployment, lifecycle model, database notes, LLM/RAG roadmap |
 | CI validation | Lightweight POC | GitHub Actions runs repository validation script |
+| Local runtime baseline | Included | Docker Compose starts a local Home Assistant instance |
 | IaC modules | Planned | Terraform/Ansible modules are not yet implemented |
-| Runtime stack | Planned | Docker Compose / Home Assistant baseline should be added next |
 | Security/compliance | Documentation baseline | GDPR/ISO/NIST are target frameworks, not certified implementation |
 | Commercial model | Concept only | Pricing and service packaging are exploratory |
 
@@ -32,6 +32,7 @@ This repo is meant to demonstrate operational thinking around:
 - Azure-oriented hosting concepts
 - governance and evidence discipline
 - IoT / smart building service packaging
+- runnable local Home Assistant baseline for experimentation
 
 It is intentionally scoped as a proof-of-concept and portfolio reference. It should not be interpreted as a deployable managed service without further implementation, security hardening and customer-specific architecture review.
 
@@ -39,6 +40,8 @@ It is intentionally scoped as a proof-of-concept and portfolio reference. It sho
 
 | Path | Purpose |
 | --- | --- |
+| `docker-compose.yml` | Runnable local Home Assistant baseline |
+| `config/` | Local Home Assistant config mount placeholder |
 | `docs/` | Architecture, lifecycle, deployment, data model and roadmap documentation |
 | `docs/evidence/` | Validation evidence examples |
 | `docs/runbooks/` | Operational runbooks and local validation guidance |
@@ -70,6 +73,34 @@ graph LR
     end
 ```
 
+## Runnable local baseline
+
+Start a local Home Assistant instance:
+
+```bash
+docker compose up -d
+```
+
+Open:
+
+```text
+http://localhost:8123
+```
+
+The compose file binds Home Assistant to localhost only:
+
+```text
+127.0.0.1:8123:8123
+```
+
+This is intentional for local development and reduces accidental exposure outside the local machine.
+
+See:
+
+```text
+docs/runbooks/DOCKER_LOCAL_BASELINE.md
+```
+
 ## MVP path
 
 | Step | Target | Evidence expected |
@@ -90,7 +121,7 @@ bash scripts/validate-repo.sh
 cat docs/evidence/VALIDATION_REPORT.md
 ```
 
-The validation script checks that the repository has the required documentation baseline, public-safe environment example, CI workflow and core architecture files. It is intentionally lightweight and does not claim production readiness.
+The validation script checks that the repository has the required documentation baseline, public-safe environment example, CI workflow, Docker Compose baseline and core architecture files. It is intentionally lightweight and does not claim production readiness.
 
 ## Security and compliance framing
 
