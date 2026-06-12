@@ -34,8 +34,8 @@ docs/evidence/VALIDATION_REPORT.md
 | PASS | Evidence directory | docs/evidence found |
 | PASS | Runbook directory | docs/runbooks found |
 | PASS | Script directory | scripts found |
-| PASS | Python dependency hygiene | No root requirements.txt placeholder present |
-| PASS | README claims | No obvious production-readiness overclaim found |
+| PASS | Python dependency hygiene | requirements.txt is a pip-compatible no-runtime-dependencies placeholder |
+| PASS | README claims | No obvious readiness overclaim found |
 
 ## Example summary
 
