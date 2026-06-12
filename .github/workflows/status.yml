@@ -1,15 +1,13 @@
-name: CI Pipeline
+name: HAaaS Repository Validation
 
-on: [push]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Verify Environment
+      - uses: actions/checkout@v4
+      - name: Repository validation
         run: |
-          echo "Environment is stable."
-          echo "CI/CD pipeline check successful.""Environment is stable and dependencies are cached."
+          bash scripts/validate-repo.sh
+          cat docs/evidence/VALIDATION_REPORT.md
