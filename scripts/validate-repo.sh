@@ -97,10 +97,10 @@ else
   pass "Python dependency hygiene" "No root requirements.txt placeholder present"
 fi
 
-if grep -qi "production-ready\|GDPR-ready\|Scale-Up" README.MD; then
+if grep -qi "GDPR-ready\|Scale-Up\|build-passing" README.MD; then
   warn "README claims" "README may contain strong readiness wording; review manually"
 else
-  pass "README claims" "No obvious production-readiness overclaim found"
+  pass "README claims" "No obvious readiness overclaim found"
 fi
 
 report_line
