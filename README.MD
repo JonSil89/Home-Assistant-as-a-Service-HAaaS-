@@ -1,275 +1,125 @@
-[![MIT License](https://img.shields.io/github/license/JonSil89/Home-Assistant-as-a-Service-HAaaS-?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/blob/master/LICENSE)
-[![Language](https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/pulls)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions)
+[![CI](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/status.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/status.yml)
+[![License: MIT](https://img.shields.io/github/license/JonSil89/Home-Assistant-as-a-Service-HAaaS-?style=flat-square)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/blob/main/LICENSE)
 
+# Home Assistant as a Service - HAaaS
 
-# Strategic Summary: IaC & DLCM in Modern Service Delivery
+Architecture and documentation proof-of-concept for a managed Home Assistant service model.
 
-![Operational Power](https://img.shields.io/badge/Operational%20Power-POSIX%20Bash-4EAA25?style=for-the-badge&logo=gnu-bash)
+This repository explores how Home Assistant environments could be deployed, documented and operated with repeatable infrastructure, lifecycle management and lightweight governance practices.
 
-Tämä esitys ei ole pelkkä tekninen parannus; se on **strateginen siirtymä kohti vähäriskisempää, skaalautuvampaa ja kaupallisesti menestyksekkäämpää** IT-palvelunhallintamallia.
+> Current status: documentation and validation baseline. This is not a production-ready HAaaS platform.
 
----
+## Current status
 
-## 1. Perusta: Tehokkuuden maksimointi (IaC)
+| Area | Status | Notes |
+| --- | --- | --- |
+| Service concept | Working documentation baseline | Managed Home Assistant / IoT operations model |
+| Architecture docs | Working baseline | Azure deployment, lifecycle model, database notes, LLM/RAG roadmap |
+| CI validation | Lightweight POC | GitHub Actions runs repository validation script |
+| IaC modules | Planned | Terraform/Ansible modules are not yet implemented |
+| Runtime stack | Planned | Docker Compose / Home Assistant baseline should be added next |
+| Security/compliance | Documentation baseline | GDPR/ISO/NIST are target frameworks, not certified implementation |
+| Commercial model | Concept only | Pricing and service packaging are exploratory |
 
-**Infrastructure as Code (IaC)** muodostaa nykyaikaisen it-toiminnan perustan, ratkaisten manuaalisen ja virhealttiin järjestelmäylläpidon ongelmat.
+## Scope
 
-| Komponentti | Perustelu | Strateginen arvo |
-| :--- | :--- | :--- |
-| **Tekninen toteutus (IaC)** | Korvaa manuaalisen työn koodilla hyödyntäen **PowerShell- ja Azure Automation** -osaamista. | **Nopeus ja skaalautuvuus:** Kokonaiset ympäristöt voidaan monistaa minuuteissa ilman asiantuntijamäärän kasvattamista. |
-| **Virheetön operointi** | Koodipohjaiset ympäristöt eliminoivat inhimilliset konfiguraatiovirheet. | **Kustannustehokkuus:** Vähemmän virheitä tarkoittaa vähemmän vianetsintää, mikä parantaa suoraan katteita. |
-| **Documentation by Design** | Kun infrastruktuuri on koodia, se **dokumentoi itse itsensä**. | **Operatiivinen selkeys:** Vähentää manuaalista dokumentointia ja mahdollistaa keskittymisen arkkitehtuuriin ja tekoälyavusteiseen suunnitteluun. |
+This repo is meant to demonstrate operational thinking around:
 
----
+- managed Home Assistant lifecycle operations
+- documentation-first service design
+- Infrastructure as Code planning
+- deployment and rollback thinking
+- Azure-oriented hosting concepts
+- governance and evidence discipline
+- IoT / smart building service packaging
 
-## 2. Laatu- ja vaatimustenmukaisuusvarmistus (DLCM & PRRC)
+It is intentionally scoped as a proof-of-concept and portfolio reference. It should not be interpreted as a deployable managed service without further implementation, security hardening and customer-specific architecture review.
 
-Yhdistämällä **Digital Lifecycle Management (DLCM)** ja **säädöstenmukaisuus (PRRC)**, automaatio nousee **lakisääteisen hallinnon (Governance)** tasolle.
+## Repository structure
 
-| Komponentti | Selitys ja kytkös säädöksiin | Strateginen arvo |
-| :--- | :--- | :--- |
-| **Digitaalinen elinkaari (DLCM)** | Kattaa koko elinkaaren – mukaan lukien hallitut muutokset, päivitykset ja käytöstäpoiston. | **Auditoitavuus:** Jokainen toimenpide on lokitettu ja jäljitettävissä vaativimpien asiakkaiden vaatimusten mukaisesti. |
-| **Säädösvarmuus (PRRC)** | Osoitettu osaaminen säädöskehyksistä, kuten **MDR ja tietosuoja**, varmistaa ratkaisujen laillisen kestävyyden. | **Riskienhallinta:** Vähentää merkittävästi compliance-riskejä ja vahvistaa luottamusta organisaation hallintokykyyn. |
-| **Kriittisyyden hallinta** | Kokemus **kriittisistä IT-ympäristöistä**, kuten terveydenhuollon ja hyvinvointialueiden migraatioista. | **Luottamus ja vakaus:** Takaa ratkaisut, jotka täyttävät tiukimmat laatuvaatimukset, joissa vakaus on elinehto. |
+| Path | Purpose |
+| --- | --- |
+| `docs/` | Architecture, lifecycle, deployment, data model and roadmap documentation |
+| `docs/evidence/` | Validation evidence examples |
+| `docs/runbooks/` | Operational runbooks and local validation guidance |
+| `scripts/validate-repo.sh` | Lightweight repository validation script |
+| `.github/workflows/status.yml` | CI workflow for validation |
+| `.env.example` | Public-safe example environment variables |
 
----
-
-## 3. Liiketoiminta-arvo ja pragmatismi
-
-Tämä visio yhdistää teknisen kehityksen suoraan mitattaviin liiketoimintahyötyihin.
-
-| Komponentti | Selitys | Strateginen arvo |
-| :--- | :--- | :--- |
-| **Myynnin tuki ja metriikat** | Tekniset parannukset ilmaistaan mitattavina hyötyinä (esim. nopeampi käyttöönotto, parempi SLA-taso). | **Kaupallinen vaikutus:** Tarjoaa myynnille konkreettisia todisteita: *"Käyttöönotot ovat X kertaa nopeampia IaC-automaation ansiosta."* |
-| **Pragmaattinen toteutus** | Keskittyy olennaiseen ja toimivaan – ei ylisuunnitteluun. | **Tasapainoinen tehokkuus:** Varmistaa, että ratkaisut ovat kustannustehokkaita ja vastaavat asiakkaiden todellisuutta. |
-
----
-
-## 4. Strateginen lopputulos
-
-Tämä lähestymistapa mahdollistaa **kolmitasoisen arvonluonnin**:
-1. **Teknologia:** Ennakoiva modernisointi IaC:n kautta.  
-2. **Hallinto:** Luotettava vaatimustenmukaisuus ja jäljitettävyys DLCM-linjauksen avulla.  
-3. **Liiketoiminta:** Konkreettiset suorituskyvyn parannukset, jotka muuttuvat suoraan **kannattavuudeksi ja asiakasluottamukseksi**.
-
----
-
-### Kirjoittaja
-**Jonne Silvennoinen** Technical Writer & ITSM/Compliance Specialist  
-Erityisosaaminen: IaC, DLCM, PRRC, Azure, PowerShell ja sosiaali- ja terveysalan IT-järjestelmät
-
-
-
-
-
-<!-- [START BADGES] -->
-[![CI](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/blank.yml)
-<!-- [END BADGES] -->
-[![CI Pipeline](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/status.yml/badge.svg)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-/actions/workflows/status.yml)
-
-
-
-[![Project Status](https://img.shields.io/badge/Status-Scale--Up-green?style=for-the-badge)](https://github.com/JonSil89/Home-Assistant-as-a-Service-HAaaS-)
-![Lifecycle Managed](https://img.shields.io/badge/Lifecycle-Device%20Onboarding%20%E2%86%92%20Maintenance%20%E2%86%92%20Decommissioning-success?style=for-the-badge)
-![Infrastructure](https://img.shields.io/badge/Infrastructure-IaC-blue?style=for-the-badge&logo=ansible)
-![Cloud](https://img.shields.io/badge/Cloud-Azure-0089D6?style=for-the-badge&logo=microsoft-azure)
-![Security](https://img.shields.io/badge/Security-GDPR--Ready-red?style=for-the-badge)
-
-# Home Stack – Automated Infrastructure & Data Quality
-<a href="https://app.commanddash.io/agent?github=JonSil89/Home-Assistant-as-a-Service-HAaaS-"><img src="https://img.shields.io/badge/AI-Code%20Assist-EB9FDA"></a>
-
-This repository contains my personal infrastructure-as-code (IaC) experiments, 
-CI/CD pipelines, and automated data quality checks.
-
-## Repository structure (high level)
-
-- `docs/` – architecture, data model, Azure deployment, YAML configuration guide, LLM and Pinecone roadmaps.
-- `.github/workflows/` – CI esimerkit (GitHub Actions), tällä hetkellä pääasiassa skeleton-tyyppisiä.
-- `.env.example` – esimerkkiasetukset vektoritietokantaa, embedding-malleja ja integraatioita varten.
-- `requirements.txt` – ei-koodilliset vaatimukset (compliance, operointi, arkkitehtuurirajoitteet).
-- `main.yml` – yksinkertainen CI-step, joka kopioi `.env.example` → `.env`.
-
-> Huom: Repo keskittyy tällä hetkellä **arkkitehtuuriin ja dokumentaatioon** – varsinainen sovelluskoodi ja IaC-moduulit lisätään myöhemmin.
-
-## Yleiskuvaus
-
-**Home Assistant as a Service (HAaaS)** on suomalainen IoT-projektialusta, joka yhdistää **Home Assistantin avoimen lähdekoodin joustavuuden** ja **yritystason hallittavuuden**.  
-Tavoitteena on rakentaa palvelu, joka mahdollistaa automaation ja älykotien hallinnan helposti, turvallisesti ja ammattimaisesti – ilman DIY-asennuksen monimutkaisuutta.
-
-Projektin keskiössä on **Infrastructure as Code (IaC)** ja **Digital Lifecycle Management (DLCM)** -malli, joka tekee Home Assistant -ratkaisuista skaalautuvia, hallittavia ja luotettavia.
-
-> “Avoin kuin Home Assistant. Luotettava kuin kaupallinen järjestelmä.”
-
----
-
-## Missio
-
-Luoda hallittu, avoimeen lähdekoodiin perustuva automaatioekosysteemi, joka yhdistää modernin IT-palvelutuotannon, automaation ja pilviarkkitehtuurin parhaat puolet.  
-Tavoitteena on tehdä Home Assistantista palvelu, jota voi käyttää kuka tahansa – ilman asennus- tai ylläpitohaasteita.
-
----
-## Keskeinen idea
+## High-level architecture idea
 
 ```mermaid
 graph LR
     subgraph Provisioning
-        A[Terraform/Ansible] --> B[Docker/Azure Container Apps]
+        A[Terraform / Ansible - planned] --> B[Docker / Azure Container Apps - planned]
     end
 
     subgraph Core_Service
-        B --> C{Home Assistant Core}
-        C --> D[(InfluxDB / MariaDB)]
+        B --> C[Home Assistant Core]
+        C --> D[(MariaDB / InfluxDB - optional)]
     end
 
-    subgraph Management
-        E[GitLab CI/CD] -->|Continuous Update| C
-        F[Prometheus/Grafana] -->|Telemetria| C
+    subgraph Operations
+        E[GitHub Actions] --> F[Validation / Evidence]
+        G[Runbooks] --> F
     end
 
     subgraph Secure_Access
-        G[Cloudflare Tunnel] --> C
-        C --> H[Mobile App / Dashboard]
+        H[Cloudflare Tunnel / VPN - planned] --> C
+        C --> I[Mobile App / Dashboard]
     end
 ```
 
+## MVP path
 
+| Step | Target | Evidence expected |
+| --- | --- | --- |
+| 1 | Documentation baseline | README, architecture docs, lifecycle docs |
+| 2 | Local validation | `scripts/validate-repo.sh` passes and writes evidence report |
+| 3 | Docker baseline | Home Assistant Docker Compose stack starts locally |
+| 4 | IaC baseline | Terraform/Ansible skeleton validates without secrets |
+| 5 | Operational runbooks | Backup, restore, update and rollback documented |
+| 6 | Pilot readiness | Security boundaries, data model and support model reviewed |
 
-## Technical Architecture (DLCM Model)
+## Local validation
 
-The HAaaS ecosystem follows the Digital Lifecycle Management (DLCM) model, ensuring a robust path from deployment to decommissioning.
+Run:
 
+```bash
+bash scripts/validate-repo.sh
+cat docs/evidence/VALIDATION_REPORT.md
+```
 
----
+The validation script checks that the repository has the required documentation baseline, public-safe environment example, CI workflow and core architecture files. It is intentionally lightweight and does not claim production readiness.
 
-## Markkinanäkymä
+## Security and compliance framing
 
-Nykyinen markkina on jakautunut kahteen ääripäähän:
+This repository may reference GDPR, ISO 27001 and NIST as design influences. These references mean documentation targets and architectural intent, not certification or full compliance.
 
-| Segmentti | Vahvuudet | Puutteet |
-|------------|------------|-----------|
-| **DIY (Home Assistant, OpenHAB)** | Vapaa, avoin, joustava | Vaatii teknistä osaamista, ei tukea, ei skaalaudu |
-| **Kaupalliset (Google Home, Apple HomeKit, Verisure)** | Helppokäyttöinen, luotettava | Suljettu ekosysteemi, korkea hinta, ei räätälöitävissä |
+A production HAaaS environment would still require at least:
 
-**HAaaS sijoittuu näiden väliin:**  
-Yhdistämme kaupallisten palvelujen helppokäyttöisyyden ja DIY-järjestelmien avoimuuden.
+- threat modeling
+- secret management design
+- access-control model
+- backup and restore testing
+- logging and monitoring design
+- customer data classification
+- vulnerability management
+- legal and contractual review
 
----
+## Commercial concept
 
-## Arvolupaus
+The commercial HAaaS idea is exploratory: a managed Home Assistant service could package deployment, maintenance, updates, monitoring and support for homes, SMEs or property environments.
 
-- Helppo käyttöönotto ja automaattiset päivitykset  
-- Täysi avoimen lähdekoodin joustavuus ja räätälöitävyys  
-- Ammattimainen ylläpito ja tukipalvelu  
-- Turvallinen ja GDPR-yhteensopiva arkkitehtuuri  
-- Skaalautuva malli yksittäisistä kotitalouksista suuriin kiinteistöverkostoihin
+The pricing and go-to-market ideas in this repository are concept material, not active product commitments.
 
----
-
-## Kohderyhmät
-
-| Kohderyhmä | Tarve | Ratkaisu |
-|-------------|--------|-----------|
-| **Kiinteistönomistajat / Isännöitsijät** | Kiinteistöjen energian ja olosuhteiden seuranta | Keskitetty, automatisoitu hallintapaneeli ilman IT-osastoa |
-| **PK-yritykset** | Räätälöidyt automaatioratkaisut (valaistus, kulunvalvonta, tilavaraukset) | “Me hoidamme IT:n, te keskitytte liiketoimintaan.” |
-| **Teknologisesti suuntautuneet kuluttajat** | Home Assistant ilman teknistä säätöä | Kaikki ominaisuudet, nolla asennusstressiä |
-
----
-
-## Tekninen fokus
-
-- **Infrastructure as Code (IaC)** – vakioidut ja toistettavat ympäristöt  
-- **Digital Lifecycle Management (DLCM)** – automaattinen päivitys-, testaus- ja rollback-prosessi  
-- **Pilvi- ja paikallinen hosting** – Azure, Docker, Raspberry Pi  
-- **Tietoturva ja Compliance** – GDPR, ISO 27001, NIST-periaatteet  
-- **Monitoring & Telemetria** – Grafana, Prometheus, HA Supervisor  
-- **CI/CD Pipeline** – GitLab Runners, versionhallinta ja julkaisut automaattisesti  
-
----
-
-## MVP (Minimum Viable Product)
-
-| Vaihe | Tavoite | Työkalut |
-|--------|----------|-----------|
-| **1. Proof of Concept** | Yksi hallittu Home Assistant -instanssi IaC:n kautta | Ansible, Docker |
-| **2. Pilotointi** | Ensimmäiset testiasiakkaat (kuluttaja / pk-yritys) | Azure-hosted HA |
-| **3. DLCM-testaus** | Automaattiset päivitykset ja valvonta | GitLab CI/CD |
-| **4. Tilausmalli** | Subscription-palvelun julkaisu | Stripe, Web-portal |
-
----
-
-## Hinnoitteluluonnos
-
-| Paketti | Kuvaus | Hinta / kk |
-|----------|---------|------------|
-| **Starter** | Peruskäyttö kotiin (5 automaatiota) | 9,90 € |
-| **Pro** | Laajempi automaatio ja etähallinta | 29,90 € |
-| **Business** | Räätälöity yritysympäristö | 99,00 €+ |
-| **Enterprise** | Taloyhtiöt ja kiinteistöverkostot | Pyynnöstä |
-
----
-
-## Tietoturva ja sääntely
-
-- GDPR-yhteensopiva arkkitehtuuri  
-- IAM ja käyttövaltuushallinta (Azure AD, paikallinen HA)  
-- ISO 27001 / NIST -vaatimustenmukainen dokumentointi  
-- Turvallinen päivitysketju CI/CD:n kautta  
-- Säännölliset auditointitestit ja lokienhallinta  
-
----
-
-## Etenemispolku
-
-1. **MVP:n viimeistely** (Home Assistant + IaC)  
-2. **Pilottiasiakkaiden testaus** (B2C ja B2B)  
-3. **DLCM-järjestelmän integrointi ja dokumentaatio**  
-4. **Brändi ja verkkosivusto**  
-5. **Sijoittaja- ja kumppaniverkoston rakentaminen**
-
----
-
-## Teknologiat ja työkalut
-
-- **IaC / Automaatio:** Ansible, Terraform, PowerShell DSC  
-- **CI/CD ja DevOps:** GitLab, Docker, Azure Pipelines  
-- **Dokumentointi:** GitBook, Markdown, AI-assistant (OpenAI)  
-- **Valvonta:** Grafana, Prometheus  
-- **Hosting:** Azure, paikallinen laitteisto  
-- **Tietoturva:** Defender, IAM, GPO, GDPR Compliance
-
----
-
-## Yhteistyö ja jatkokehitys
-
-Projektin pitkän aikavälin tavoitteena on muodostaa **modulaarinen IoT-ekosysteemi**, johon voidaan liittää uusia integraatioita ja kaupallisia laajennuksia.  
-Tämä sisältää mm.:
-
-- Laitekohtaiset moduutit (esim. Shelly, Zigbee, Z-Wave)  
-- Pilvipohjaiset API-integraatiot (Azure IoT Hub, MQTT)  
-- AI-avusteinen automaation hallinta  
-- Smart Energy -ominaisuudet ja analytiikka  
-
----
-
-## Tietoa tekijästä
+## Author
 
 **Jonne Silvennoinen**  
-IT-asiantuntija & tekninen dokumentoija  
-Erikoistunut Microsoft 365-, Azure-, IaC- ja automaatioympäristöihin.  
-Kokemusta moniasiakas- ja hyvinvointialueympäristöistä, joissa tietoturva ja dokumentaatio ovat keskiössä.  
-Kiinnostunut avoimen lähdekoodin ratkaisuista, IoT:sta ja modernista IT-palvelutuotannosta.
+IT specialist / technical documentation / DevSecOps-governance growth profile
 
-📧 **jonne.silvennoinen89@gmail.com**  
-🌐 [LinkedIn](https://www.linkedin.com/in/jonne-silvennoinen-0421aa266/)  
-💾 [GitHub](https://github.com/jonnesilvennoinen)
+Focus areas: Microsoft hybrid IT, documentation, operational security, CI/CD evidence, infrastructure governance, IoT and managed service concepts.
 
----
+## License
 
-## Lisenssi
-
-Tämä projekti on **open source**, mutta sen kaupallinen laajennus (HAaaS Managed Service) on erillisen lisenssisopimuksen alainen.  
-Lisätiedot ja kaupalliset yhteistyöt: ota yhteyttä sähköpostitse.
-
----
+Open-source proof-of-concept material. Commercial use, managed service packaging and customer deployments require separate review and agreement.
