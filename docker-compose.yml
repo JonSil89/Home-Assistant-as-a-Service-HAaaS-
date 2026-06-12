@@ -1,0 +1,9 @@
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    container_name: haaas-homeassistant
+    volumes:
+      - ./config:/config
+    ports:
+      - "127.0.0.1:8123:8123"
+    restart: unless-stopped
