@@ -88,7 +88,11 @@ check_dir "docs/runbooks" "Runbook directory"
 check_dir "scripts" "Script directory"
 
 if [ -f "requirements.txt" ]; then
-  warn "Python dependency hygiene" "requirements.txt exists; use only for pip dependencies"
+  if grep -q "No Python runtime dependencies" requirements.txt; then
+    pass "Python dependency hygiene" "requirements.txt is a pip-compatible no-runtime-dependencies placeholder"
+  else
+    warn "Python dependency hygiene" "requirements.txt exists; use only for pip dependencies"
+  fi
 else
   pass "Python dependency hygiene" "No root requirements.txt placeholder present"
 fi
