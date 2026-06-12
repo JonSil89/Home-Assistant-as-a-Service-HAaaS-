@@ -83,6 +83,7 @@ check_file "docs/requirements.md" "Requirements documentation"
 check_file "docs/evidence/VALIDATION_REPORT_EXAMPLE.md" "Validation evidence example"
 check_file "docs/runbooks/LOCAL_VALIDATION.md" "Local validation runbook"
 check_file "docs/runbooks/DOCKER_LOCAL_BASELINE.md" "Docker local baseline runbook"
+check_file "docs/runbooks/BACKUP_AND_RESTORE.md" "Backup and restore runbook"
 
 check_dir "docs" "Documentation directory"
 check_dir "docs/evidence" "Evidence directory"
