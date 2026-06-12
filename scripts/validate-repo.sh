@@ -58,7 +58,7 @@ check_dir() {
   echo "| Field | Value |"
   echo "| --- | --- |"
   echo "| Generated | $TIMESTAMP |"
-  echo "| Scope | Documentation and repository hygiene validation |"
+  echo "| Scope | Documentation, repository hygiene and local baseline validation |"
   echo "| Production readiness claim | No |"
   echo
   echo "## Results"
@@ -71,6 +71,7 @@ check_file "README.MD" "Root README"
 check_file ".env.example" "Environment template"
 check_file ".gitignore" "Git ignore rules"
 check_file ".github/workflows/status.yml" "CI workflow"
+check_file "docker-compose.yml" "Docker Compose baseline"
 check_file "docs/README.md" "Docs overview"
 check_file "docs/deployment_azure.md" "Azure deployment concept"
 check_file "docs/database_schema.md" "Data model documentation"
@@ -81,11 +82,19 @@ check_file "docs/roadmap_pinecone.md" "RAG roadmap"
 check_file "docs/requirements.md" "Requirements documentation"
 check_file "docs/evidence/VALIDATION_REPORT_EXAMPLE.md" "Validation evidence example"
 check_file "docs/runbooks/LOCAL_VALIDATION.md" "Local validation runbook"
+check_file "docs/runbooks/DOCKER_LOCAL_BASELINE.md" "Docker local baseline runbook"
 
 check_dir "docs" "Documentation directory"
 check_dir "docs/evidence" "Evidence directory"
 check_dir "docs/runbooks" "Runbook directory"
 check_dir "scripts" "Script directory"
+check_dir "config" "Home Assistant config directory"
+
+if grep -q "127.0.0.1:8123:8123" docker-compose.yml; then
+  pass "Docker localhost binding" "Home Assistant port is bound to localhost"
+else
+  warn "Docker localhost binding" "Review docker-compose.yml port exposure manually"
+fi
 
 if [ -f "requirements.txt" ]; then
   if grep -q "No Python runtime dependencies" requirements.txt; then
